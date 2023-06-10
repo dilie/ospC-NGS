@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Coverage in ospC Ref Seqs</title>
+
+<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+<script src="index.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+</head>
+
+<body>
+<table>
+<tr><td colspan="2"><h1>Coverage in <i>ospC</i> Ref Seqs</h1></td></tr>
+<tr>
+<td rowspan="2" id="heatmapZone">
+    <div id="ref"></div>
+    <div id="plotStat"></div>
+    <div id="guide"></div>
+</td>
+<td id="plotZone">
+    <div id="selectMenu">
+        Batch&nbsp;
+        <select id="sampleBatch">
+            <option value="covW">Wang</option>
+            <option value="plusLw">Wang + ref L</option>
+            <option value="plusCortexW">Wang + O/vsp/cortex</option>
+            <option value="c04c14-cortex-w">Wang C04/C14 cortex</option>
+            <option value="c14-O-w">Wang C14/O sequenced</option>
+            <option value="editNT-w">Wang Extend N &amp; T</option>
+            <option disabled>───</option>
+            <option value="cov">15 refs</option>
+            <option value="plusL">+ ref L</option>
+            <option value="plusOvsp">+ ref O/vsp</option>
+            <option value="c04c14">C04/C14 replace vsp</option>
+            <option value="c04c14-cortex">C04/C14 cortex</option>
+            <option value="c14-O">C14/O sequenced</option>
+            <option value="vsp">vsp replace C04 cortex</option>
+            <option value="editNT">Extend N &amp; T</option>
+            <option value="addB3">+ B3</option>
+            <option value="batch4-align">batch4 aligned</option>
+            <option disabled>───</option>
+            <option value="addVsp2">batch123</option>
+            <option value="batch4">batch4</option>
+            <option value="abcd-20ref" selected>Total (119) - 20 Ref</option>
+            <option disabled>───</option>
+            <option value="simulateA">simulation A</option>
+            <option value="simulateFJ1_10">simulation FJ 1:10</option>
+            <option value="simulateFJ10_1">simulation FJ 10:1</option>
+        </select>
+    </div>
+</td></tr>
+<tr><td align="center" valign="top">
+    <table id="sampleInfo">
+        <tr><td>tick ID</td><td>seq ID</td><td>Tick Stage</td><td>Collect Date</td><td>Collect Place</td><td>Gel Band</td></tr>
+        <tr><td id="kid"></td><td id="sid"></td><td id="stage"></td><td id="collDate"></td><td id="collPlace"></td><td id="gel"></td></tr>
+    </table>
+</td></tr>
+</table>
+<div id="tip"></div>
+</body>
+
+
